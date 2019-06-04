@@ -1,0 +1,61 @@
+<template>
+  <div class="skills-list page-breakable">
+    <h2>
+      My Skills
+    </h2>
+    <hr>
+    <ul>
+      <li
+        v-for="(skill, index) in config.skills.list"
+        :key="index"
+      >
+        {{ skill }}
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+import config from '../../../config';
+
+export default {
+  data() {
+    return {
+      config,
+    };
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+  h2 {
+    // @media screen {
+    //   font-size: 2rem;
+    // }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-position: inside;
+      width: 33.333%;
+      margin: 7px 0;
+      padding-right: 10px;
+
+      &:nth-child(3) {
+        padding-right: 0;
+      }
+
+      @media print {
+        width: 50%;
+        margin: 2.5pt 0;
+        padding-right: 5pt;
+
+      }
+    }
+  }
+</style>
