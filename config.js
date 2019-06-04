@@ -59,7 +59,7 @@ module.exports = {
     `,
     achievementList: [
       'Improved page load speeds by a significant factor within our web application.',
-      'Added a light testing framework around the legacy backend using Postman and Chai',
+      'Added a light testing framework around the legacy backend using Postman and Chai.',
       'Automated several tasks performed by other members of the team increasing productivity.',
       'Created several intermediary API\'s and tools to assist in data gathering and processing.',
     ],
@@ -102,7 +102,7 @@ module.exports = {
         ],
       },
       {
-        course: 'IBM - New Ways of Working',
+        course: 'New Ways of Working',
         provider: 'IBM',
         duration: '2018',
         paragraph: `
@@ -116,7 +116,7 @@ module.exports = {
         ],
       },
       {
-        course: 'IBM - Cloud Application Developer Bootcamp',
+        course: 'Cloud Application Developer Bootcamp',
         provider: 'IBM',
         duration: '2018',
         paragraph: 'A short bootcamp that involved understanding and utlising IBM cloud products in order to design and produce reliable solutions.',

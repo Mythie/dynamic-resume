@@ -42,12 +42,16 @@ export default {
 
     li {
       list-style-position: inside;
-      width: 33.333%;
       margin: 7px 0;
-      padding-right: 10px;
+      width: 100%;
 
       &:nth-child(3) {
         padding-right: 0;
+      }
+
+      @media screen and (min-width: 1000px) {
+        width: 33.333%;
+        padding-right: 10px;
       }
 
       @media print {

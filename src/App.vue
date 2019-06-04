@@ -2,7 +2,8 @@
   <div id="app">
     <!-- <div class="test" /> -->
     <div class="side-bar">
-      <SideBar :class="['info', { 'with-stripe': config.resume.stripe.enabled }]" />
+      <div class="slide" />
+      <SideBar :class="['info', { 'with-stripe': config.resume.stripe.enabled }, 'hide-mobile']" />
       <div
         v-if="config.resume.stripe.enabled"
         class="stripe"
@@ -159,16 +160,25 @@ p {
     }
   }
 
+  .hide-mobile {
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
   .stripe {
     min-width: 10%;
-    background: get('resume.stripe.color');
+    background: $stripeColor;
     min-height: 100vh;
   }
 }
 
 .resume-content {
-  margin-left: 22%;
-  width: 78%;
+  @media screen and (min-width: 600px) {
+    margin-left: 22%;
+    width: 78%;
+
+  }
   padding: 40px;
 
   @media print {

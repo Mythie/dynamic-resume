@@ -81,12 +81,15 @@ ul {
 
     li {
       list-style-position: inside;
-      width: 50%;
       margin-bottom: 7px;
-      padding-right: 10px;
 
       &:nth-child(3) {
         padding-right: 0;
+      }
+
+      @media screen and (min-width: 1000px) {
+        width: 50%;
+        padding-right: 10px;
       }
 
       @media print {
