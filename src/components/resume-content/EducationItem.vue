@@ -26,7 +26,6 @@
     <p class="education-duration">
       {{ item.duration }}
     </p>
-    <div class="page-breakable" />
   </div>
 </template>
 
@@ -63,6 +62,7 @@ export default {
 .education-duration {
   width: 100%;
   text-align: right;
+  padding-top: 7px;
   @media print {
     font-size: 0.8rem;
   }
@@ -89,7 +89,7 @@ ul {
       }
 
       @media screen and (min-width: 1000px) {
-        padding-right: 10px;
+        padding-right: 40px;
         width: 50%;
       }
 

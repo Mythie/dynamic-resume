@@ -33,21 +33,38 @@ export default {
     };
   },
   mounted() {
+    // Okay so we want to try and break on each page programatically, but it's not so easy.
+
+    // I think this is the one chrome uses?
     let breakAt = 1300;
+    // For storing the nodelist so we can sort it
     let potentialBreaks = [];
+
+    // Get all the places we can break
     document.querySelectorAll('.page-breakable')
       .forEach((elem) => {
+        // Add them to our list
         potentialBreaks.push(elem);
       });
+
+    // Sort based on where each item ends
     potentialBreaks = potentialBreaks.sort(
       (a, b) => a.getBoundingClientRect().bottom > b.getBoundingClientRect().bottom,
     );
 
+    // This seems to fix a timing thing?
+    console.log(potentialBreaks);
+
+    // Foreach potential break area
     potentialBreaks.forEach((elem) => {
+      // Get its coords
       const coords = elem.getBoundingClientRect();
 
+      // If it would be greater than our page break
       if (coords.bottom > breakAt) {
+        // Lets forcefully break there to preserve formatting
         elem.classList.add('break-page');
+        // Increase to the next page.
         breakAt *= 2;
       }
     });
@@ -125,6 +142,7 @@ p {
 
 @media print {
   @page {
+    height: 1300px;
     padding: 0;
     margin: 0;
   }

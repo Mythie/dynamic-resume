@@ -82,6 +82,7 @@ ul {
     li {
       list-style-position: inside;
       margin-bottom: 7px;
+      width: 100%;
 
       &:nth-child(3) {
         padding-right: 0;

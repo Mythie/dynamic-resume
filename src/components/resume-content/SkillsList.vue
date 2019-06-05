@@ -51,7 +51,7 @@ export default {
 
       @media screen and (min-width: 1000px) {
         width: 33.333%;
-        padding-right: 10px;
+        padding-right: 40px;
       }
 
       @media print {

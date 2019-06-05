@@ -46,11 +46,11 @@ export default {
   .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
+    margin: 0 -20px;
   }
 
   .item {
     width: 50%;
-    padding: 15px;
+    padding: 20px;
   }
 </style>

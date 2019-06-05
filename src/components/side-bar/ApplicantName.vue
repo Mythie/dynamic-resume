@@ -25,13 +25,16 @@ export default {
 <style lang="scss" scoped>
   h1 {
     font-size: 3.2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
 
     small {
-      display: inline-block;
+      display: block;
+      width: 100%;
       font-size: 1.2rem;
 
       @media print {
-        margin-top: 10pt;
+        // margin-top: 7pt;
         font-size: 1rem;
       }
     }

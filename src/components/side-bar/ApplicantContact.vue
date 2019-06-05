@@ -108,6 +108,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../config.scss";
 
 .row {
   display: flex;
@@ -140,15 +141,18 @@ export default {
 
   .content {
     width: 90%;
+    padding-left: 10px;
+
+    a, a:active, a:visited {
+      color: mix(#FFFFFF, $sidebarTextColor, 88%) !important;
+      text-decoration: none;
+    }
 
     @media print {
       width: 85%;
+      padding-left: 4pt;
     }
   }
-}
-
-a, a:active, a:visited {
-  color: mix(#FFFFFF, #41B883, 88%) !important;
 }
 
 </style>
